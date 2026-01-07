@@ -1,37 +1,3 @@
-![MIKES DATA WORK GIT REPO](https://raw.githubusercontent.com/mikesdatawork/images/master/git_mikes_data_work_banner_01.png "Mikes Data Work")        
-
-# Use SQL To Compare Local SQL Accounts To Active Directory
-**Post Date: March 21, 2018**        
-
-
-
-## Contents    
-- [About Process](##About-Process)  
-- [SQL Logic](#SQL-Logic)  
-- [Author](#Author)  
-- [License](#License)       
-
-## About-Process
-
-
-![compare sql security to active directory]( https://mikesdatawork.files.wordpress.com/2018/03/image0012.png "SQL to AD Linked Server")
- 
-
-<p>In most environment DBA' will need to know what accounts have been disabled on the network so they can in-turn be removed from SQL Server as a matter of standard security.
-
-This script will help build the following objects…
-Create Linked Server ADSI_LINK
-Query Active Directory
-Create Temp Table With Active Directory Results
-Get Size of Temp Table
-Compare Local Domain Accounts to Active Directory
-Find Disabled (or deprovisioned accounts)
-
-This will create alist of known Disabled accounts that were added to SQL Server.</p>      
-
-
-## SQL-Logic
-```SQL
 use master;
 set nocount on
  
@@ -129,21 +95,4 @@ where
  drop table ##adresults;
  drop table ##logins;
 */
-
-```
-
-
-[![WorksEveryTime](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://shitday.de/)
-
-## Author
-
-[![Gist](https://img.shields.io/badge/Gist-MikesDataWork-<COLOR>.svg)](https://gist.github.com/mikesdatawork)
-[![Twitter](https://img.shields.io/badge/Twitter-MikesDataWork-<COLOR>.svg)](https://twitter.com/mikesdatawork)
-[![Wordpress](https://img.shields.io/badge/Wordpress-MikesDataWork-<COLOR>.svg)](https://mikesdatawork.wordpress.com/)
-
-     
-## License
-[![LicenseCCSA](https://img.shields.io/badge/License-CreativeCommonsSA-<COLOR>.svg)](https://creativecommons.org/share-your-work/licensing-types-examples/)
-
-![Mikes Data Work](https://raw.githubusercontent.com/mikesdatawork/images/master/git_mikes_data_work_banner_02.png "Mikes Data Work")
 
